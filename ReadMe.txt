@@ -1,10 +1,17 @@
 PowerShell関連 各ファイルの説明
 
-【デスクトップショートカット作成.vbs】
+【Create_DesktopShortcut.vbs】
 PowerShellスクリプト(ps1ファイル)を、このファイルにドロップすると、
 ExecutionPolicy Bypassのオプション付きで、デスクトップにショートカットを作成できる。
 複数ファイルのドロップにも対応。
 ショートカットの名称はスクリプトのファイル名となる。
+
+【MessageFile.xlsx】
+ExcelReadOnlyOpenスクリプト用のサンプルファイル
+
+【StatingFile.xlsx】
+ExcelReadOnlyOpenスクリプト用のサンプルファイル
+
 
 《ExcelReadOnlyOpen》フォルダ
 【ExcelReadOnlyOpen_Coexist.ps1】

@@ -7,10 +7,10 @@ ExecutionPolicy Bypassのオプション付きで、デスクトップにショ�
 ショートカットの名称はスクリプトのファイル名となる。
 
 【MessageFile.xlsx】
-ExcelReadOnlyOpenスクリプト用のサンプルファイル
+ExcelReadOnlyOpen_Coexist.ps1スクリプト用のサンプルファイル
 
 【StatingFile.xlsx】
-ExcelReadOnlyOpenスクリプト用のサンプルファイル
+ExcelReadOnlyOpen_Coexist.ps1スクリプト用のサンプルファイル
 
 
 《ExcelReadOnlyOpen》フォルダ

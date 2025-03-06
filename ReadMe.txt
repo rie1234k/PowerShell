@@ -12,7 +12,6 @@ ExcelReadOnlyOpen_Coexist.ps1スクリプト用のサンプルファイル
 【StatingFile.xlsx】
 ExcelReadOnlyOpen_Coexist.ps1スクリプト用のサンプルファイル
 
-
 《ExcelReadOnlyOpen》フォルダ
 【ExcelReadOnlyOpen_Coexist.ps1】
 エクセルを読み取り専用、ウィンドウ最大化で開く。
@@ -26,4 +25,3 @@ ExcelReadOnlyOpen_Coexist.ps1スクリプト用のサンプルファイル
 【FolderDeleteTool.ps1】
 指定したフォルダを削除するツール
 進捗状況表示付き
-

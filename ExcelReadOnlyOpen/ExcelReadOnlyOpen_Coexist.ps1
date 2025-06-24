@@ -1,4 +1,4 @@
-	$folderpath = Split-Path  $PSScriptRoot　# 起動したいファイルあるのフォルダパス（現在はこのスクリプトの1つ上の階層で設定）
+	$folderpath = Split-Path  $PSScriptRoot　# 起動したいファイルのあるフォルダパス（現在はこのスクリプトの1つ上の階層で設定）
 	$filename = "StatingFile.xlsx" # 起動したいファイル名
     $bufName = "MessageFile.xlsx"　# 起動時に開く一時ファイルを用意し、起動したいファイルと同じ場所に置いておく
 

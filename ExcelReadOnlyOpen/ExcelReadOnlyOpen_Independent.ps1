@@ -1,5 +1,5 @@
 	$folderpath = Split-Path  $PSScriptRoot -Parent # 起動したいファイルあるのフォルダパス（現在はこのスクリプトの1つ上の階層で設定）
-	$filename = "起動したいファイル名.xlsx"
+	$filename = "StatingFile.xlsx"
 
 	$file = $folderpath + "\" + $filename　
 

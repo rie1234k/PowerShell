@@ -37,11 +37,6 @@ PowerShellスクリプト(ps1ファイル)をドラッグアンドドロップ�
 複数ファイルのドラッグアンドドロップにも対応。
 絶対パス仕様。
 
-【CreateLaunchShortcut.lnk】
-「CreateLaunchShortcut.ps1」の起動用ショートカット。
-このショートカットにPowerShellスクリプト(ps1ファイル)をドラッグアンドドロップすると、
-起動用ショートカットが作成される。
-
 【CreateLaunchShortcut.bat】
 このバッチファイルに、PowerShellスクリプト(ps1ファイル)をドラッグアンドドロップすると、
 CreateLaunchShortcut.ps1にファイルを渡して実行する。

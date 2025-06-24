@@ -8,7 +8,7 @@
     $Args | foreach{  
         $myfile = Get-Item -LiteralPath $_
         $workfile = $myfile.Name
-        $linkfile = $myfile.BaseName + ".lnk"
+        $linkfile = $myfile.BaseName + "_Run.lnk"
         $workfolder = $myfile.DirectoryName
         $opt = "-ExecutionPolicy RemoteSigned -WindowStyle Hidden -File "
         $WsShell = New-Object -ComObject WScript.Shell

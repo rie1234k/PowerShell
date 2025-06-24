@@ -12,7 +12,7 @@
         $workfolder = $myfile.DirectoryName
         $opt = "-ExecutionPolicy RemoteSigned -WindowStyle Hidden -File "
         $WsShell = New-Object -ComObject WScript.Shell
-        $Shortcut = $WsShell.CreateShortcut($workfolder + "\" + $linkfile)
+        $Shortcut = $WsShell.CreateShortcut((Join-Path $workfolder $linkfile))
         $Shortcut.TargetPath = "powershell"
         $Shortcut.Arguments = $opt + '"'+ $workfile + '"'
         $Shortcut.WorkingDirectory = ""

@@ -6,15 +6,14 @@
     }
 
     $Args | foreach{  
-        $myfile = Get-Item -LiteralPath $_
-        $workfile = $myfile.Name
+        $myfile = Get-Item -LiteralPath $_        
         $linkfile = $myfile.BaseName + "_Run.lnk"
         $workfolder = $myfile.DirectoryName
         $opt = "-ExecutionPolicy RemoteSigned -WindowStyle Hidden -File "
         $WsShell = New-Object -ComObject WScript.Shell
-        $Shortcut = $WsShell.CreateShortcut($workfolder + "\" + $linkfile)
+        $Shortcut = $WsShell.CreateShortcut((Join-Path $workfolder $linkfile))
         $Shortcut.TargetPath = "powershell"
-        $Shortcut.Arguments = $opt + '"'+ $workfolder + "\" + $workfile + '"'
+        $Shortcut.Arguments = $opt + '"'+ $myfile + '"'
         $Shortcut.WorkingDirectory = $workfolder
         $Shortcut.WindowStyle = 7
         $Shortcut.Save()

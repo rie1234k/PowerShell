@@ -20,7 +20,7 @@
     }
 
     $offset = 0x15
-    $Path = $workfolder + "\" + $linkfile
+    $Path = (Join-Path $workfolder $linkfile)
     $byteReader = [System.IO.File]::ReadAllBytes($Path)
     $byteReader[$offset] = 0x20
     [System.IO.File]::WriteAllBytes($Path, $byteReader)

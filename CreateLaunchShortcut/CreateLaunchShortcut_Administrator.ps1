@@ -4,26 +4,24 @@
         exit 
     }
 
-    $Args | foreach{  
-        $myfile = Get-Item -LiteralPath $_        
-        $linkfile = $myfile.BaseName + "_Run.lnk"
+    foreach ($arg in $Args){  
+        $myfile = Get-Item -LiteralPath $arg
+        $linkfile = $myfile.BaseName + ".lnk"
         $workfolder = $myfile.DirectoryName
         $opt = "-ExecutionPolicy RemoteSigned -WindowStyle Hidden -File "
         $WsShell = New-Object -ComObject WScript.Shell
         $Shortcut = $WsShell.CreateShortcut((Join-Path $workfolder $linkfile))
-        $Shortcut.TargetPath = "powershell"
-        $Shortcut.Arguments = $opt + '"'+ $myfile + '"'
+        $Shortcut.TargetPath = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
+        $Shortcut.Arguments = $opt + '"'+ $myfile.FullName + '"'
         $Shortcut.WorkingDirectory = $workfolder
         $Shortcut.WindowStyle = 7
         $Shortcut.Save()
 
-        #管理者として実行オプションを有効にする
-        $offset = 0x15
+        #管理者権限で実行にチェックを入れる
+        $offset = 0x15 # 管理者スイッチオフセット
         $Path = (Join-Path $workfolder $linkfile)
         $byteReader = [System.IO.File]::ReadAllBytes($Path)
-        $byteReader[$offset] = 0x20
+        $byteReader[$offset] = 0x20  # 0x00 無効
         [System.IO.File]::WriteAllBytes($Path, $byteReader)
 
     }
-
-    

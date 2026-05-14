@@ -1,7 +1,7 @@
     if($Args.Count -eq 0){
         $f = Add-Type -AssemblyName System.Windows.Forms
         [System.Windows.Forms.MessageBox]::Show($f,"ファイルがドロップされていません。処理を終了します。","メッセージ",[System.Windows.Forms.MessageBoxButtons]::OK)
-        exit 
+        return
     }
 
     foreach ($arg in $Args){  
